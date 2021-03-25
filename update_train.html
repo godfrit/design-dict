@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD SYSTEM</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">DICT-ILCDB | TRAININGS</div>
+        <div class="toggle"></div>
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trainings.html">Trainings</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="assessment.html">Assesstment</a></li>
+                <li><a href="proficiency.html">Proficeincy</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+            <div class="social-bar">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/DICTgovph">
+                            <img src="images/facebook.png" target="_blank" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <img src="images/twitter.png" target="_blank" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">
+                            <img src="images/instagram.png" target="_blank" alt="" />
+                        </a>
+                    </li>
+                </ul>
+                <a href="mailto:you@email.com" class="email-icon">
+                    <img src="images/email.png" alt="" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--Main Site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="trainings.html"><i class="fas fa-arrow-alt-circle-left"></i> Back</a>
+                </div>
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update Details</h2>
+                <span class="text-light">Use the form to update trainee details.</span>
+            </div>
+
+            <!--Form Handling-->
+            <form action="/api/users" method="POST" id="add_user">
+                <div class="new_user">
+                    <div class="form-group">
+                        <label for="name" class="text-light">Name</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="name" value="" placeholder="Juan Dela Cruz">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Title</label>
+                        <input type="text" name="email" value="" placeholder="NC-2">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Location</label>
+                        <input type="text" name="email" value="" placeholder="NCR-VAL">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="text-light">Gender</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-2" name="gender" value="Male">
+                            <label for="radio-2" class="radio-label">Male</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-3" name="gender" value="Female">
+                            <label for="radio-3" class="radio-label">Female</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-4" name="gender" value="Unspecified">
+                            <label for="radio-4" class="radio-label">Not Specified</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </main>
+    <!--/Main Site-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

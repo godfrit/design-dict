@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DICT-ILCDB</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">DICT-ILCDB | ICT-PROFICIENCY</div>
+        <div class="toggle"></div>
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trainings.html">Trainings</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="assessment.html">Assesstment</a></li>
+                <li><a href="proficiency.html">Proficeincy</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+            <div class="social-bar">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/DICTgovph">
+                            <img src="images/facebook.png" target="_blank" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com">
+                            <img src="images/twitter.png" target="_blank" alt="" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">
+                            <img src="images/instagram.png" target="_blank" alt="" />
+                        </a>
+                    </li>
+                </ul>
+                <a href="mailto:you@email.com" class="email-icon">
+                    <img src="images/email.png" alt="" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--Main Site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="proficiency.html"><i class="fas fa-arrow-alt-circle-left"></i> Back</a>
+                </div>
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark">New Proficiency Exam</h2>
+                <span class="text-light">Use the form to add a new proficiency tally.</span>
+            </div>
+
+            <!--Form Handling-->
+            <form action="/api/users" method="POST" id="add_user">
+                <div class="new_user">
+                    <div class="form-group">
+                        <label for="name" class="text-light">Examination</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="name" value="" placeholder="Thread-1">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Male:Female Ratio</label>
+                        <input type="text" name="address2" value="" placeholder="10:10">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Total Examinees</label>
+                        <input type="text" name="address2" value="" placeholder="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Date</label>
+                        <input type="date" class="datePick" name="email" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Save</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </main>
+    <!--/Main Site-->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
